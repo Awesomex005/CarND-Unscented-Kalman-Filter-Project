@@ -6,6 +6,8 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <math.h>
+#define PI (acos(-1))
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
@@ -71,12 +73,14 @@ public:
   /**
    * Constructor
    */
-  UKF();
+  UKF(double std_a=1, double std_yawdd=PI/16.);
 
   /**
    * Destructor
    */
   virtual ~UKF();
+
+  void SetProccessNoise(double std_a=1, double std_yawdd=PI/16.);
 
   /**
    * ProcessMeasurement
