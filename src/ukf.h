@@ -80,7 +80,7 @@ public:
    */
   virtual ~UKF();
 
-  void SetProccessNoise(double std_a=1, double std_yawdd=PI/16.);
+  void SetProccessNoise(double std_a=1.8, double std_yawdd=0.188);
 
   /**
    * ProcessMeasurement

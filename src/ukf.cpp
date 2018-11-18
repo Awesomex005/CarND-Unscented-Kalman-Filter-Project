@@ -25,10 +25,10 @@ UKF::UKF(double std_a, double std_yawdd) {
   P_ = MatrixXd(5, 5);
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = std_a; //30, 1, 1.8
+  std_a_ = std_a; //30, 1, 1.8, 1.0
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = std_yawdd; //30,PI/16., 0.188
+  std_yawdd_ = std_yawdd; //30,PI/16., 0.188, 0.14
   
   //DO NOT MODIFY measurement noise values below these are provided by the sensor manufacturer.
   // Laser measurement noise standard deviation position1 in m
