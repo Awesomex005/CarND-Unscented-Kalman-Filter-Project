@@ -103,9 +103,9 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 
       P_ << 1, 0, 0, 0, 0,
             0, 1, 0, 0, 0,
-            0, 0, 1000, 0, 0,
-            0, 0, 0, 1000, 0,
-            0, 0, 0, 0, 1000;
+            0, 0, 25, 0, 0,
+            0, 0, 0, 25, 0,
+            0, 0, 0, 0, 1;
 
       is_initialized_ = true;
     }
@@ -115,9 +115,9 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 
       P_ << std_laspx_*std_laspx_, 0, 0, 0, 0,
             0, std_laspy_*std_laspy_, 0, 0, 0,
-            0, 0, 1000, 0, 0,
-            0, 0, 0, 1000, 0,
-            0, 0, 0, 0, 1000;
+            0, 0, 25, 0, 0,
+            0, 0, 0, 25, 0,
+            0, 0, 0, 0, 1;
 
       is_initialized_ = true;
     }
